@@ -186,12 +186,16 @@ If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: 
 
 */
 
+function arraysToObject(array) {
+  return array.reduce((obj, keyVal) => {
+    let [key, value] = keyVal
+    obj[key] = value
+    console.log(key, value, keyVal)
+    return obj
+  }, {})
+}
 
-
-
-
-
-
+arraysToObject([[2014, "Horse"], [2015, "Sheep"]])
 
 
 /*
@@ -207,14 +211,15 @@ If you pass it "hello" then it should return "olleh"
 */
 
 
+function reverseString(string) {
+  let newString = '';
+  for (let i = (string.length - 1); i >= 0; i--) {
+    newString = newString + string[i];
+  }
+  return newString;
+}
 
-
-
-
-
-
-
-
+reverseString(string);
 
 
 /*
