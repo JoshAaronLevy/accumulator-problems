@@ -69,12 +69,16 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
+// function doubleNumbers(arr) {
+//   let result = []
+//   while (result.length < arr.length) {
+//     result.push(arr[result.length] * 2)
+//   }
+//   return result
+// }
+
 function doubleNumbers(arr) {
-  let result = []
-  while (result.length < arr.length) {
-    result.push(arr[result.length] * 2)
-  }
-  return result
+  return arr.map(x => x * 2)
 }
 
 doubleNumbers();
@@ -121,12 +125,15 @@ NOTE: you can assume each input will be the same length
 */
 
 
+function interleave(array1, array2) {
+  return array1.reduce((accum, value, index) => {
+    console.log(index, accum, value)
+    accum.push(value, array2[index])
+    return accum
+  }, [])
+}
 
-
-
-
-
-
+interleave(['a','b','c'], ['d','e','f'])
 
 
 
