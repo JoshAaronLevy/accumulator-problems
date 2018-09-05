@@ -9,9 +9,11 @@ Solution: This one has already been completed for you.
 */
 
 function test() {
- var string ="This Works!";
- return string;
+  var string ="This Works!";
+  return string;
 }
+
+test();
 
 
 
@@ -67,7 +69,15 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
+function doubleNumbers(arr) {
+  let result = []
+  while (result.length < arr.length) {
+    result.push(arr[result.length] * 2)
+  }
+  return result
+}
 
+doubleNumbers();
 
 
 
