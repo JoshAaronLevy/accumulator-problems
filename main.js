@@ -15,8 +15,6 @@ function test() {
 
 test();
 
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -32,13 +30,20 @@ For example, the tests require that to complete this challenge, your function mu
 results on the index page in the browser.
 */
 
+function sum(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (!array) {
+      return 0;
+    } else {
+      sum = sum + array[i];
+      console.log(sum);
+    }
+  }
+  return sum
+}
 
-
-
-
-
-
-
+sum();
 
 /*
 ----------------------------------------
@@ -50,7 +55,11 @@ Write function named doubleLetters that will take a string and double every lett
 Example: if you pass it "abc" then it should return "aabbcc"
 */
 
+const lettersToDbl = 'abc';
 
+function doubleLetters() {
+
+}
 
 
 
@@ -69,25 +78,11 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
-// function doubleNumbers(arr) {
-//   let result = []
-//   while (result.length < arr.length) {
-//     result.push(arr[result.length] * 2)
-//   }
-//   return result
-// }
-
 function doubleNumbers(arr) {
   return arr.map(x => x * 2)
 }
 
 doubleNumbers();
-
-
-
-
-
-
 
 /*
 ----------------------------------------
@@ -124,7 +119,6 @@ Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should retur
 NOTE: you can assume each input will be the same length
 */
 
-
 function interleave(array1, array2) {
   return array1.reduce((accum, value, index) => {
     console.log(index, accum, value)
@@ -134,8 +128,6 @@ function interleave(array1, array2) {
 }
 
 interleave(['a','b','c'], ['d','e','f'])
-
-
 
 /*
 ----------------------------------------
@@ -197,7 +189,6 @@ function arraysToObject(array) {
 
 arraysToObject([[2014, "Horse"], [2015, "Sheep"]])
 
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -210,7 +201,6 @@ Example:
 If you pass it "hello" then it should return "olleh"
 */
 
-
 function reverseString(string) {
   let newString = '';
   for (let i = (string.length - 1); i >= 0; i--) {
@@ -220,7 +210,6 @@ function reverseString(string) {
 }
 
 reverseString(string);
-
 
 /*
 ----------------------------------------
