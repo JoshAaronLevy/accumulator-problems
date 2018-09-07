@@ -55,18 +55,16 @@ Write function named doubleLetters that will take a string and double every lett
 Example: if you pass it "abc" then it should return "aabbcc"
 */
 
-const lettersToDbl = 'abc';
-
-function doubleLetters() {
-
+function doubleLetters(string) {
+  let tempString = '';
+  for (let i = 0; i < string.length; i++) {
+    tempString = tempString + (string[i] + string[i]);
+    console.log(tempString)
+  }
+  return tempString
 }
 
-
-
-
-
-
-
+doubleLetters(string);
 
 /*
 ----------------------------------------
