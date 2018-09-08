@@ -220,12 +220,24 @@ If you pass it "yay" then it should return false because it's odd
 If you pass it "heehaw" then it should return false because "hee" doesn't equal "haw"
 */
 
+function repeats(string) {
+  let firstHalf = '';
+  let secondHalf = '';
+  for (let i = 0; i < string.length; i++) {
+    if (i < (string.length / 2)) {
+      firstHalf = firstHalf + string[i];
+    } else {
+      secondHalf = secondHalf + string[i];
+    }
+  }
+  if (secondHalf === firstHalf) {
+    return true
+  } else {
+    return false
+  }
+}
 
-
-
-
-
-
+repeats(string);
 
 /*
 ----------------------------------------
