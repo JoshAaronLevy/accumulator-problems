@@ -96,14 +96,11 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
+function multiplyNumbers(arr, val) {
+  return arr.map(x => x * val)
+}
 
-
-
-
-
-
-
-
+multiplyNumbers();
 
 /*
 ----------------------------------------
