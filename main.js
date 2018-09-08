@@ -134,9 +134,15 @@ Write function named createRange that will take a number and a default value and
 Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
 */
 
+function createRange(number, value) {
+  let valueRange = [];
+  for (let i = 0; i < number; i++) {
+    valueRange.push(value);
+  }
+  return valueRange
+}
 
-
-
+createRange(number, value);
 
 
 
@@ -276,12 +282,17 @@ If you pass "aaa" it should return true
 If you pass "aba" it should return false
 */
 
+function allEqual(string) {
+  for (let i = 1; i < string.length; i++) {
+    if (string[i] !== string[i - 1]) {
+      return false
+    } else if ((string[i] === string[i - 1]) || (string === '')) {
+      return true
+    }
+  }
+}
 
-
-
-
-
-
+allEqual(string);
 
 /*
 ----------------------------------------
@@ -296,12 +307,15 @@ If you pass "45" it should return 9
 If you pass "246" it should return 12
 */
 
+function sumLetters(string) {
+  let sum = 0;
+  for (let i = 0; i < string.length; i++) {
+    sum = sum + string[i];
+  }
+  return sum
+}
 
-
-
-
-
-
+sumLetters(string);
 
 /*
 ----------------------------------------
@@ -314,11 +328,6 @@ Example:
 
 If you pass "you" it should return 2
 */
-
-
-
-
-
 
 
 
@@ -338,9 +347,15 @@ If you pass "you" it should return ["y", "o", "u"]
 NOTE: do not use the builtin `split` method
 */
 
+function split(string) {
+  let strArray = [];
+  for (let i = 0; i < string.length; i++) {
+    strArray.push(string[i]);
+  }
+  return strArray
+}
 
-
-
+split(string);
 
 
 
@@ -503,9 +518,16 @@ If you pass 1 it should return [1]
 If you pass 3 it should return [1,2,3]
 */
 
+function arrayOfNumbers(number) {
+  numArray = [];
+  for (let i = 1; i < number + 1; i++) {
+    numArray.push(i);
+    console.log(numArray);
+  }
+  return numArray
+}
 
-
-
+arrayOfNumbers(number);
 
 
 
