@@ -310,7 +310,7 @@ If you pass "246" it should return 12
 function sumLetters(string) {
   let sum = 0;
   for (let i = 0; i < string.length; i++) {
-    sum = sum + string[i];
+    sum = sum + parseInt(string[i]);
   }
   return sum
 }
@@ -476,9 +476,15 @@ If you pass "a", 3 it should return "aaa"
 If you pass "b", 3 it should return "bb"
 */
 
+function createString(number, letter) {
+  let stringCount = '';
+  for (let i = 0; i < number; i++) {
+    stringCount = stringCount + letter;
+  }
+  return stringCount
+}
 
-
-
+createString(number, letter);
 
 
 
