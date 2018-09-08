@@ -251,12 +251,17 @@ Example:
 If you pass it "abcdef" then it should return "ace" because those represent every other letter
 */
 
+function everyOther(string) {
+  let oddChars = '';
+  for (let i = 0; i < string.length; i++) {
+    if (i % 2 === 0) {
+      oddChars = oddChars + string[i];
+    }
+  }
+  return oddChars
+}
 
-
-
-
-
-
+everyOther(string);
 
 /*
 ----------------------------------------
