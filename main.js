@@ -606,9 +606,19 @@ If you pass [1,1], 1 it should return true
 If you pass [1,2], 1 it should return false
 */
 
+function every(arr, val) {
+  let result = true;
+  for (let i = 1; i < arr.length; i++) {
+    if ((arr[i] !== val) || (arr[i] !== arr[i - 1])) {
+      result = false;
+    } else {
+      result = true;
+    }
+  }
+  return result
+}
 
-
-
+every(arr, val);
 
 
 
