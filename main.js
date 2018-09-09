@@ -620,9 +620,6 @@ function every(arr, val) {
 
 every(arr, val);
 
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -636,12 +633,23 @@ If you pass [1,2], 1 it should return true
 If you pass [3,2], 1 it should return false
 */
 
+function some(arr, val) {
+  let result = false;
+  let matchSum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      matchSum = matchSum + 1;
+    }
+    if (matchSum > 0) {
+      result = true;
+    } else {
+      result = false;
+    }
+  }
+  return result
+}
 
-
-
-
-
-
+some(arr, val);
 
 /*
 ----------------------------------------
