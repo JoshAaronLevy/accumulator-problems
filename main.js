@@ -159,12 +159,17 @@ Example:
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
 */
 
+function flipArray(array) {
+  var rv = {};
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] !== undefined) {
+      rv[i] = array[i];
+    }
+  }
+  return rv;
+}
 
-
-
-
-
-
+flipArray(array);
 
 /*
 ----------------------------------------
@@ -435,14 +440,23 @@ If you pass 0,2 it should return false because the only number between 0 and 2 i
 If you pass 0,6 it should return true because between 0 and six (the numbers 1,2,3,4,5) there are three odds - 1, 3 and 5
 */
 
+function threeOdds(minNum, maxNum) {
+  let result = null;
+  let sumArray = [];
+  for (let i = minNum; i <= (maxNum - 1); i++) {
+    if (i % 2 !== 0) {
+      sumArray.push(1);
+    }
+  }
+  if (sumArray.length < 3) {
+    result = false;
+  } else {
+    result = true;
+  }
+  return result
+}
 
-
-
-
-
-
-
-
+threeOdds(minNum, maxNum);
 
 /*
 ----------------------------------------
